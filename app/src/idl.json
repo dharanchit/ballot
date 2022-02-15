@@ -1,0 +1,70 @@
+{
+  "version": "0.1.0",
+  "name": "hot_or_not",
+  "instructions": [
+    {
+      "name": "initialize",
+      "accounts": [
+        {
+          "name": "voteAccount",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "voteHot",
+      "accounts": [
+        {
+          "name": "voteAccount",
+          "isMut": true,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "voteNot",
+      "accounts": [
+        {
+          "name": "voteAccount",
+          "isMut": true,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    }
+  ],
+  "accounts": [
+    {
+      "name": "VoteAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "hot",
+            "type": "u64"
+          },
+          {
+            "name": "not",
+            "type": "u64"
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "address": "566YvE5muijBEm4uLdxYckYAbYKkvADyhi2MoLi1X4E4"
+  }
+}
